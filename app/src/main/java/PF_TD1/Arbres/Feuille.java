@@ -21,4 +21,15 @@ public class Feuille implements Arbre
         }
         return false;
     }
+
+    Set<Integer> valeurs()
+    {
+        //A REFLECHIR
+    }
+
+    Integer somme()
+    {
+        return valeur
+    }
+
 }
