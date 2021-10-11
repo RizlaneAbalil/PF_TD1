@@ -9,8 +9,16 @@ class Noeud implements Arbre
 
     int taille()
     {
-        return fils.size();
+        //C'est la somme des tailles des fils
+        int res = 0;
+        for(Arbre a : fils)
+        {
+            res += a.taille();
+        }
+        return res;
     }
+
+
 
 
 }
