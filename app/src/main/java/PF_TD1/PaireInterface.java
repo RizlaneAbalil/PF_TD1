@@ -1,10 +1,11 @@
-public Interface PaireInterface<T>
+public Interface PaireInterface<A, B>
 {
-    public T fst();
+    A fst();
 
     public T snd();
 
-    public T changeFst(T valeur);
+    //On rajoute un paramètre de générécité à la mathéode
+    <C> changeFst<C,B>(C valeur);
 
-    public T changeSnd(T valeur);
+    <C> changeSnd<A,C>(C valeur);
 }
