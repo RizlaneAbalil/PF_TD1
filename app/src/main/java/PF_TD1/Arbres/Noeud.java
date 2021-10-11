@@ -18,7 +18,18 @@ class Noeud implements Arbre
         return res;
     }
 
-
+    boolean contient(final Integer val)
+    {
+        //Pour chaque fils vérifie si il contient la valeur recherchée
+        for(Arbre a : fils)
+        {
+            if(a.contient(val))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }
