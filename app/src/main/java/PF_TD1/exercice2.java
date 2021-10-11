@@ -11,4 +11,9 @@ public class Paire<T>
         return this.paire1;
     }
 
+    public T snd()
+    {
+        return this.paire2;
+    }
+
 }
