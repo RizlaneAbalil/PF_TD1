@@ -33,7 +33,12 @@ class Noeud implements Arbre
 
     Set<Integer> valeurs()
     {
-        //TO DO
+        Set<Integer> res = new HashSet<>();
+        for(Arbre a : fils)
+        {
+            res.addAll(a.valeurs());
+        }
+        return res;
     }
 
     Integer somme()
