@@ -53,6 +53,21 @@ class Noeud implements Arbre
 
     Integer min()
     {
+        if(fils == null || fils.size() == 0)
+        {
+            return null;
+        }
+        //On récupère le min du premier fils
+        //On compare le min des autres fils au premier et on écrase la valeur du min
+        int min = fils.get(0).min();
 
+        for(int i=0; i<fils.size(); i++)
+        {
+            if(fils.get(i).min() < min)
+            {
+                min = fils.get(i).min();
+            }
+        }
+        return min;
     }
 }
