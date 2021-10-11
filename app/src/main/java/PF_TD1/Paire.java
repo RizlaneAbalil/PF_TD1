@@ -12,25 +12,20 @@ public class Paire<A,B> implements PaireInterface<A,B>
         this.paire2 = paire2;
     }
 
-    public A fst()
+
+    A fst()
     {
         return this.paire1;
     }
 
-    public B snd()
+    B snd()
     {
         return this.paire2;
     }
 
-    public T changeFst(A valeur)
+    <C> changeFst<C,B>(C valeur)
     {
-        this.paire1 = valeur ;
-        return new Paire<A>(this.paire1, this.paire2);
-    }
-
-    public T changeSnd(T valeur)
-    {
-        this.paire2 = valeur ;
+        return new Paire<C,B>(C paire1, this.paire2);
     }
 
 }
