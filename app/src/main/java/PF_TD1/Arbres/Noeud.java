@@ -46,8 +46,13 @@ class Noeud implements Arbre
 
         for(Arbre a : fils)
         {
-            res += fils.somme();
+            res += a.somme();
         }
         return res;
+    }
+
+    Integer min()
+    {
+
     }
 }
