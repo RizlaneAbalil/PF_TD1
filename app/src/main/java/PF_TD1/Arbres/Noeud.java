@@ -31,5 +31,23 @@ class Noeud implements Arbre
         return false;
     }
 
+    Set<Integer> valeurs()
+    {
+        //TO DO
+    }
 
+    Integer somme()
+    {
+        if(fils == null || fils.size() == 0)
+        {
+            return null;
+        }
+        int res = 0 ;
+
+        for(Arbre a : fils)
+        {
+            res += fils.somme();
+        }
+        return res;
+    }
 }
