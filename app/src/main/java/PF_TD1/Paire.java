@@ -20,4 +20,10 @@ public class Paire<T>
     {
         this.paire1 = valeur ;
     }
+
+    public T changeSnd(T valeur)
+    {
+        this.paire2 = valeur ;
+    }
+
 }
