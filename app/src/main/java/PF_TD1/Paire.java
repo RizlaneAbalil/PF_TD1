@@ -16,4 +16,8 @@ public class Paire<T>
         return this.paire2;
     }
 
+    public T changeFst(T valeur)
+    {
+        this.paire1 = valeur ;
+    }
 }
