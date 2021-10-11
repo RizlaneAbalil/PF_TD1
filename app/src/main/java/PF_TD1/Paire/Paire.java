@@ -12,7 +12,6 @@ public class Paire<A,B> implements PaireInterface<A,B>
         this.paire2 = paire2;
     }
 
-
     A fst()
     {
         return this.paire1;
