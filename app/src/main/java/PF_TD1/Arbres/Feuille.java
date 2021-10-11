@@ -24,7 +24,7 @@ public class Feuille implements Arbre
 
     Set<Integer> valeurs()
     {
-        //A REFLECHIR
+        return Set.of(valeur);
     }
 
     Integer somme()
@@ -32,4 +32,18 @@ public class Feuille implements Arbre
         return valeur
     }
 
+    Integer min()
+    {
+        return valeur;
+    }
+
+    Integer max()
+    {
+        return valeur;
+    }
+
+    boolean estTrie()
+    {
+        return true;
+    }
 }
