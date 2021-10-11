@@ -70,4 +70,24 @@ class Noeud implements Arbre
         }
         return min;
     }
+
+    Integer max()
+    {
+        if(fils == null || fils.size() == 0)
+        {
+            return null;
+        }
+        //On récupère le max du premier fils
+        //On compare le max des autres fils au premier et on écrase la valeur du min
+        int max = fils.get(0).max();
+
+        for(int i=0; i<fils.size(); i++)
+        {
+            if(fils.get(i).max() > max)
+            {
+                max = fils.get(i).max();
+            }
+        }
+        return max;
+    }
 }
