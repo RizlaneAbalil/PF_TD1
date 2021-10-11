@@ -95,4 +95,30 @@ class Noeud implements Arbre
         }
         return max;
     }
+
+    boolean estTrie()
+    {
+        //Pour tout a appartient à fils, on a trie(a)
+        boolean res = true;
+        for(int i=0; i<fils.size()-1; i++)
+        {
+            Arbre f = fils.get(i);
+            if(! f.estTrie())
+            {
+                return false;
+            }
+        }
+
+        //Pour tout ai, aj on a le max de fils > min de fils+1
+        for(int i=0; i<fils.size()-1; i++)
+        {
+            Arbre f = fils.get(i);
+            Arbre f1 = fils.get(i+1);
+            if(f.max() > f1.min())
+            {
+                return false;
+            }
+        }
+        return res;
+    }
 }
