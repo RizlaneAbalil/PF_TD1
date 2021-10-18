@@ -43,9 +43,9 @@ public class Feuille<T extends Sommable<T> & Comparable> implements Arbre<T> {
         return valeur;
     }
 
-    /*
+
     @Override
-    public Integer max() {
+    public T max() {
         return valeur;
     }
 

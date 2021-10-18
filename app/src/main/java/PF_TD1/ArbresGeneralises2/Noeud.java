@@ -83,20 +83,21 @@ public class Noeud<T extends Sommable<T> & Comparable> implements Arbre<T> {
         }
         return rtr;
     }
-/*
+
     @Override
-    public Integer max() {
+    public T max() {
         if (fils == null || fils.size() == 0)
             return null;
-        int rtr = fils.get(0).max();
+        T rtr = fils.get(0).max();
         for (int i = 1; i < fils.size(); i++) {
-            int max = fils.get(i).max();
-            if (max > rtr) {
+            T max = fils.get(i).max();
+            if (max.compareTo(rtr) > 0) {
                 rtr = max;
             }
         }
         return rtr;
     }
+    /*
 
     /**
      * un noeud de fils f1 ... fi ... fn est trié ssi
