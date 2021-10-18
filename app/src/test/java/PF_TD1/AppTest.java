@@ -16,4 +16,9 @@ public class AppTest {
 	Arbre<Entier> v = new Feuille<>(new Entier(4));
 	assertEquals(v.taille(), 1); 
     }
+    @Test public int taille_Arbres_Chaine
+    {
+	Arbre<Chaine> v = new Feuille<>(new Chaine("quatre"));
+	asserEquals(v.taille(), 1); 
+    }
 }
