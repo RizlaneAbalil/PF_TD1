@@ -1,8 +1,8 @@
 package PF_TD1.ArbresGeneralises2;
 
-class Entier implements Sommable<Entier>
+class Entier implements Sommable<Entier>, Comparable<Entier>
 {
-	private int valeur; 
+	private Integer valeur;
 
 	public Entier(int valeur)
 	{
@@ -18,5 +18,10 @@ class Entier implements Sommable<Entier>
 	@Override
 	public Entier sommer(Entier valeur) {
 		return new Entier(this.valeurs() + valeur.valeurs());
+	}
+
+	@Override
+	public int compareTo(Entier o) {
+		return this.valeur.compareTo(o.valeurs());
 	}
 }

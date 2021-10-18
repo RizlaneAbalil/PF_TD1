@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Noeud<T extends Sommable<T>> implements Arbre<T> {
+public class Noeud<T extends Sommable<T> & Comparable> implements Arbre<T> {
 
     private final List<Arbre<T>> fils;
 
@@ -67,22 +67,23 @@ public class Noeud<T extends Sommable<T>> implements Arbre<T> {
             rtr += a.somme();
         }
         return rtr;
-    }
+    }*/
 
     @Override
-    public Integer min() {
+    public T min() {
         if (fils == null || fils.size() == 0)
             return null;
-        int rtr = fils.get(0).min();
+        T rtr = fils.get(0).min();
         for (int i = 1; i < fils.size(); i++) {
-            int min = fils.get(i).min();
-            if (min < rtr) {
+            T min = fils.get(i).min();
+            //Comparer 2 objets
+            if (min.compareTo(rtr) < 0) {
                 rtr = min;
             }
         }
         return rtr;
     }
-
+/*
     @Override
     public Integer max() {
         if (fils == null || fils.size() == 0)

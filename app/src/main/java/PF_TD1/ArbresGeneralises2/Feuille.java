@@ -5,7 +5,7 @@ import PF_TD1.ArbresGeneralises2.Sommable;
 
 import java.util.Set;
 
-public class Feuille<T extends Sommable<T>> implements Arbre<T> {
+public class Feuille<T extends Sommable<T> & Comparable> implements Arbre<T> {
 
     private final T  valeur;
 
@@ -36,13 +36,14 @@ public class Feuille<T extends Sommable<T>> implements Arbre<T> {
     /*@Override
     public Integer somme() {
         return valeur;
-    }
+    }*/
 
     @Override
-    public Integer min() {
+    public T min() {
         return valeur;
     }
 
+    /*
     @Override
     public Integer max() {
         return valeur;
