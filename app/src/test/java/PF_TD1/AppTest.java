@@ -11,4 +11,9 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+    @Test public int taille_Arbres_Entier
+    {
+	Arbre<Entier> v = new Feuille<>(new Entier(4));
+	assertEquals(v.taille(), 1); 
+    }
 }
