@@ -1,10 +1,13 @@
 package td1.arbres;
 
+import PF_TD1.ArbresGeneralises2.Arbre;
+import PF_TD1.ArbresGeneralises2.Sommable;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Noeud<T> implements Arbre<T> {
+public class Noeud<T extends Sommable<T>> implements Arbre<T> {
 
     private final List<Arbre<T>> fils;
 
@@ -38,6 +41,17 @@ public class Noeud<T> implements Arbre<T> {
         }
         return rtr;
     }
+
+    public T somme()
+    {
+        T v = fils.get(0).somme();
+        for(int i=1; i<fils.size(); i++)
+        {
+            v = v.sommer(fils.get(i).somme());
+        }
+        return v;
+    }
+
     /*
     @Override
     public Integer somme() {
