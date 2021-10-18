@@ -11,14 +11,35 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
-    @Test public int taille_Arbres_Entier
+    @Test public int taille_Arbres_Entier()
     {
 	Arbre<Entier> v = new Feuille<>(new Entier(4));
 	assertEquals(v.taille(), 1); 
     }
-    @Test public int taille_Arbres_Chaine
+    @Test public int taille_Arbres_Chaine()
     {
 	Arbre<Chaine> v = new Feuille<>(new Chaine("quatre"));
-	asserEquals(v.taille(), 1); 
+	assertEquals(v.taille(), 1); 
+    }
+
+    @Test public contient_Arbres()
+    {
+	Entier e = new Entier(4); 
+	Arbre<Entier> v = new Feuille<>(e);
+	assertEquals(v.contient(e), true);
+
+	Chaine c = new Chaine("quatre");
+	Arbre<Chaine> v1 = new Feuille<>(c);
+	assertEquals(v1.contient(c), true); 
+    }
+
+    @Test public valeurs_Arbres()
+    {
+	Entier e1 = new Entier(4);
+	Entier e2 = new Entier(5); 
+	Set<Entier> liste = Set.of(e1, e2); 
+	Arbre<Entier> n = new Noeud<>(List.of(New Feuille<>(e1), new Feuille<>(e2)));  
+	assertEquals(n.valeurs(), liste); 
+	
     }
 }
