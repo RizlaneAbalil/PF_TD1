@@ -11,9 +11,9 @@ public class Feuille implements Arbre {
     }
 
     @Override
-    public int taille() {
+     public int taille() {
         return 1;
-    }
+	}
 
     @Override
     public boolean contient(final Integer val) {
@@ -25,7 +25,7 @@ public class Feuille implements Arbre {
         return Set.of(valeur);
     }
 
-    @Override
+    /*@Override
     public Integer somme() {
         return valeur;
     }
@@ -43,9 +43,10 @@ public class Feuille implements Arbre {
     /**
      * une feuille est toujours triée.
      */
+    /*
     @Override
     public boolean estTrie() {
         return true;
-    }
+    }*/
     
 }

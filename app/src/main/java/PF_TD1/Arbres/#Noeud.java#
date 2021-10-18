@@ -19,7 +19,7 @@ public class Noeud implements Arbre {
             rtr += a.taille();
         }
         return rtr;
-    }
+	}
 
     @Override
     public boolean contient(final Integer val) {
@@ -38,7 +38,7 @@ public class Noeud implements Arbre {
         }
         return rtr;
     }
-
+    /*
     @Override
     public Integer somme() {
         if (fils == null || fils.size() == 0)
@@ -90,6 +90,7 @@ public class Noeud implements Arbre {
      * <li>&forall; i &in; 1..n-1, max(fi)<= min(fi+1)</li>
      * </ol>
      */
+    /*
     @Override
     public boolean estTrie() {
         return conditionTrie1() && conditionTrie2();
@@ -114,6 +115,6 @@ public class Noeud implements Arbre {
                     return false;
         }
         return rtr;
-    }
+	}*/
     
 }
