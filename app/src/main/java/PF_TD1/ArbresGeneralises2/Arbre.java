@@ -16,5 +16,5 @@ public interface Arbre<T extends Sommable<T>>
     T somme(); // somme des valeurs
     T min(); // valeur minimale
     T max(); // valeur maximale
-    //boolean estTrie(); // vrai si l'arbre est trié, faux sinon
+    boolean estTrie(); // vrai si l'arbre est trié, faux sinon
 }

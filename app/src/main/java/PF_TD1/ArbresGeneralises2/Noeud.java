@@ -1,4 +1,4 @@
-package td1.arbres;
+package PF_TD1.ArbresGeneralises2;
 
 import PF_TD1.ArbresGeneralises2.Arbre;
 import PF_TD1.ArbresGeneralises2.Sommable;
@@ -105,7 +105,7 @@ public class Noeud<T extends Sommable<T> & Comparable> implements Arbre<T> {
      * <li>&forall; i &in; 1..n, fi est trié</li>
      * <li>&forall; i &in; 1..n-1, max(fi)<= min(fi+1)</li>
      * </ol>
-     *//*
+     */
     @Override
     public boolean estTrie() {
         return conditionTrie1() && conditionTrie2();
@@ -114,7 +114,7 @@ public class Noeud<T extends Sommable<T> & Comparable> implements Arbre<T> {
     private boolean conditionTrie1() {
         boolean rtr = true;
         for (int i = 0; i < fils.size() - 1; i++) {
-            final Arbre fi = fils.get(i);
+            final Arbre<T> fi = fils.get(i);
             if (!fi.estTrie())
                 return false;
         }
@@ -124,12 +124,12 @@ public class Noeud<T extends Sommable<T> & Comparable> implements Arbre<T> {
     private boolean conditionTrie2() {
         boolean rtr = true;
         for (int i = 0; i < fils.size() - 1; i++) {
-            final Arbre fi = fils.get(i);
-            final Arbre fj = fils.get(i+1);
-                if (fi.max() > fj.min())
+            final Arbre<T> fi = fils.get(i);
+            final Arbre<T> fj = fils.get(i+1);
+                if (fi.max().compareTo(fj.min()) > 0)
                     return false;
         }
         return rtr;
-	}*/
+	}
     
 }

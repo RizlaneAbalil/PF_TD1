@@ -1,4 +1,4 @@
-package td1.arbres;
+package PF_TD1.ArbresGeneralises2;
 
 import PF_TD1.ArbresGeneralises2.Arbre;
 import PF_TD1.ArbresGeneralises2.Sommable;
@@ -51,10 +51,10 @@ public class Feuille<T extends Sommable<T> & Comparable> implements Arbre<T> {
 
     /**
      * une feuille est toujours triée.
-     *//*
+     */
     @Override
     public boolean estTrie() {
         return true;
-    }*/
+    }
     
 }
