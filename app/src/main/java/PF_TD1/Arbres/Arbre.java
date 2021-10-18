@@ -1,3 +1,5 @@
+package PF_TD1.Arbres;
+
 public interface Arbre
 {
     int taille(); // nombre de valeurs

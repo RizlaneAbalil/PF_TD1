@@ -1,4 +1,4 @@
-package td1.arbres;
+package PF_TD1.Arbres;
 
 import java.util.HashSet;
 import java.util.List;
